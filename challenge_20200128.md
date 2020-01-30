@@ -6,12 +6,14 @@ Today's challenge involves both a Linux piece and an AWS piece. Several pieces t
 this one with a lot of things most of you have not touched before.
 
 * Part 1
-  * Launch a small t2.micro instance, Setup the squid proxy server on it. Verify you can access it
+  * Launch a free tier instance (a t2.micro currently) instance, Setup the squid proxy server on it. Verify you can access it
  via the default port 3128 locally.  The 'curl' command with the proxy server flag will work here.
     * NOTE: it may not work from a laptop on the amazon network, so either run curl from the instance,
    or when connected to another network if you want to connect remotely.
 * Part 2
   * Setup AWS Cloudwatch Logs to receive the log files in /var/log/squid/access.log and cache.log
+     * Note: you will need to the setup and IAM role and attach it to the instance to allow the 
+     instance to send logs to the log group.
 * Part 3 - Verification
   * provide the output from:
   
